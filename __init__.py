@@ -19,6 +19,7 @@ from adapt.intent import IntentBuilder
 
 from mycroft.skills.core import MycroftSkill
 from mycroft.util.log import getLogger
+import webbrowser
 
 __author__ = 'oren'
 
@@ -53,7 +54,8 @@ class TranslateSkill(MycroftSkill):
         print(word)
         print("----------------------")
         word = translate(word)
-        self.speak(word, metadata={"url":"http:://foo.com"})
+        self.speak(word)
+        webbrowser.open('http://google.com/?q=' + word)
 
     def stop(self):
         pass
