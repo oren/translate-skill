@@ -1,1 +1,4 @@
-# translate-skill
+# Translate Skill
+
+## Usage:
+* `translate hi`
