@@ -20,22 +20,18 @@ from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill
 from mycroft.util.log import getLogger
 import webbrowser
+from mtranslate import translate
+
+
+
 
 __author__ = 'oren'
 
 LOGGER = getLogger(__name__)
 
-def translate(word):
-    word = word.strip()
-    # call some API for translating a word to chinese
-    if word == 'hi':
-        output = 'hi'
-    if word == 'hello':
-        output = 'hello'
-    else:
-        output = 'zaijian'
-
-    return output
+def translate(sentence):
+    translated = translate(sentence, "zh")
+    return translated
 
 
 class TranslateSkill(MycroftSkill):
