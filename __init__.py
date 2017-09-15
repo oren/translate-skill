@@ -22,9 +22,6 @@ from mycroft.util.log import getLogger
 import webbrowser
 from mtranslate import translate
 
-
-
-
 __author__ = 'oren'
 
 LOGGER = getLogger(__name__)
@@ -32,7 +29,6 @@ LOGGER = getLogger(__name__)
 def translate(sentence):
     translated = translate(sentence, "zh")
     return translated
-
 
 class TranslateSkill(MycroftSkill):
     def __init__(self):
